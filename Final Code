@@ -477,9 +477,13 @@ void showAllDataOnce() {
   u8g2.setCursor(0, line4_y);
   u8g2.printf("Pressure: %.1f hPa", aht_hpa);
   
-  // Line 5: Temperature / Humidity
+  // Line 5: Temperature 
   u8g2.setCursor(0, line5_y);
-  u8g2.printf("Temp/Hum: %.1f / %.1f%%", aht_temp, aht_hum);
+  u8g2.printf("Temp: %.1f", aht_temp);
+  
+  // Line 6: Humidity
+  u8g2.setCursor(0, line6_y);
+  u8g2.printf("Hum: %.1f%%", aht_hum);
   
   // Line 6: VOC Status (optional - like your image shows "VOC" at bottom)
   // u8g2.setCursor(0, line6_y);
